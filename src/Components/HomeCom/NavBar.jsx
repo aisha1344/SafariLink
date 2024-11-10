@@ -1,5 +1,5 @@
 import React, { useState, memo } from "react";
-import logo from "../../assets/images/logo.jpeg";
+import logo from "../../assets/images/logo safarilink.png";
 import { links } from "../../assets/data/data";
 import { Link, NavLink } from "react-router-dom";
 import { HiMenuAlt1, HiMenuAlt3,  } from "react-icons/hi";
@@ -12,11 +12,11 @@ const NavBar = () => {
   const toggleMenu = () => setShowMenu((prev) => !prev);
 
   return (
-    <section className="w-full py-2 px-4 md:py-4 md:px-16  h-24 sm:h-24 md:h-[6.4rem]  bg-white fixed top-0  z-10 ">
+    <section className="w-full py-4 px-4 md:py-4 md:px-16  h-24 sm:h-24 md:h-[6.4rem]  bg-white fixed top-0  z-10 ">
       <div className="container mx-auto flex justify-between items-center   md:grid md:grid-cols-2 md:gap-8 lg:gap-16">
         {/* Logo */}
-        <Link to="/" className="flex-shrink-0">
-          <img className="w-36 md:w-40 h-20" src={logo} alt="Logo" />
+        <Link to="/" className="flex-shrink-0 ">
+          <img className="w-40 sm:w-48 md:w-56  h-fit" src={logo} alt="Logo" />
         </Link>
 
         {/* Desktop Navigation */}

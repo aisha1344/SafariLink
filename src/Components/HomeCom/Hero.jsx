@@ -9,7 +9,7 @@ const Hero = () => {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: -100, opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="px-4 py-16 mt-8 sm:mt-5 md:mt-8 lg:mt-12 md:py-8 md:px-16 h-[100%]"
+      className="px-4 py-16 mt-8 sm:mt-5 md:mt-8 lg:mt-16 md:py-8 md:px-16 h-[100%]"
     >
       <div className="container mx-auto grid px-2 grid-cols-1 lg:grid-cols-2 gap-10 pt-8 md:pt-10">
         {/* Text Hero */}

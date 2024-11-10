@@ -4,7 +4,7 @@ import Hero from './Hero'
 
 const HeroNav = () => {
   return (
-    <section className='overflow-hidden  h-[90vh]'>
+    <section className='overflow-hidden  sm:h-screen'>
       <NavBar/>
       <Hero/>
     </section>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const AboutCom = () => {
   return (
-    <section className="bg-[#FEFEFE] mt-20 md:mt-12 py-4">
+    <section className="bg-[#FEFEFE] mt md:mt-12 py-4">
       <motion.h3
         className="text-primary text-5xl text-center  pt-6 md:py-16"
         initial={{ opacity: 0 }}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/aisha1344/SafariLink.git/static/css/main.f5c6fa65.css",
+    "main.js": "/aisha1344/SafariLink.git/static/js/main.6042630d.js",
+    "static/media/logo safarilink.png": "/aisha1344/SafariLink.git/static/media/logo safarilink.ef86e30916f295cf4e9b.png",
+    "static/media/communication.jpg": "/aisha1344/SafariLink.git/static/media/communication.1e342d7269809713c264.jpg",
+    "static/media/switch1.jpg": "/aisha1344/SafariLink.git/static/media/switch1.fccdd91c0deaa774451c.jpg",
+    "static/media/network-devices.jpg": "/aisha1344/SafariLink.git/static/media/network-devices.24071b8b4fca1b17b152.jpg",
+    "static/media/sdwann.jpg": "/aisha1344/SafariLink.git/static/media/sdwann.2c0bb59a0e7cd5c7d600.jpg",
+    "static/media/network.jpg": "/aisha1344/SafariLink.git/static/media/network.6eddaaec7aba68a139be.jpg",
+    "static/media/cloud.jpg": "/aisha1344/SafariLink.git/static/media/cloud.8d33be19a35a74e39ae7.jpg",
+    "static/media/RemoteDeviceManagement.jpg": "/aisha1344/SafariLink.git/static/media/RemoteDeviceManagement.7af4bb400509f0c094b0.jpg",
+    "static/media/ScalabilityandRedundancy.jpg": "/aisha1344/SafariLink.git/static/media/ScalabilityandRedundancy.e5df2bc1c4e0eee52783.jpg",
+    "static/media/main.jpg": "/aisha1344/SafariLink.git/static/media/main.1fe0837cfb427fa2629a.jpg",
+    "static/media/MultiWANSupport.jpg": "/aisha1344/SafariLink.git/static/media/MultiWANSupport.cd79397b4065c9f902fa.jpg",
+    "static/media/her-img.jpg": "/aisha1344/SafariLink.git/static/media/her-img.3f1d169ae2ed920a963c.jpg",
+    "static/media/router.jpg": "/aisha1344/SafariLink.git/static/media/router.ee8df66de9b5893216d4.jpg",
+    "static/media/Intelligent Routing.jpg": "/aisha1344/SafariLink.git/static/media/Intelligent Routing.b16d7082c88fc98be3cc.jpg",
+    "static/media/Secure VPNConnectivity.jpg": "/aisha1344/SafariLink.git/static/media/Secure VPNConnectivity.daf381bf90b91eec6d71.jpg",
+    "static/media/advance.jpg": "/aisha1344/SafariLink.git/static/media/advance.406a269dd8ff1b4b0ae9.jpg",
+    "index.html": "/aisha1344/SafariLink.git/index.html",
+    "main.f5c6fa65.css.map": "/aisha1344/SafariLink.git/static/css/main.f5c6fa65.css.map",
+    "main.6042630d.js.map": "/aisha1344/SafariLink.git/static/js/main.6042630d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5c6fa65.css",
+    "static/js/main.6042630d.js"
+  ]
+}
