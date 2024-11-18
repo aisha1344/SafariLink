@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1bfcdfea.css",
+    "main.js": "/static/js/main.72dfc886.js",
+    "static/media/logo safarilink.png": "/static/media/logo safarilink.ef86e30916f295cf4e9b.png",
+    "static/media/communication.jpg": "/static/media/communication.1e342d7269809713c264.jpg",
+    "static/media/switch1.jpg": "/static/media/switch1.fccdd91c0deaa774451c.jpg",
+    "static/media/deviceM.jpg": "/static/media/deviceM.01de0983ca30fb323f9b.jpg",
+    "static/media/sdwann.jpg": "/static/media/sdwann.2c0bb59a0e7cd5c7d600.jpg",
+    "static/media/network.jpg": "/static/media/network.6eddaaec7aba68a139be.jpg",
+    "static/media/cloud.jpg": "/static/media/cloud.8d33be19a35a74e39ae7.jpg",
+    "static/media/RemoteDeviceManagement.jpg": "/static/media/RemoteDeviceManagement.7af4bb400509f0c094b0.jpg",
+    "static/media/main.jpg": "/static/media/main.1fe0837cfb427fa2629a.jpg",
+    "static/media/her-img.jpg": "/static/media/her-img.3f1d169ae2ed920a963c.jpg",
+    "static/media/router.jpg": "/static/media/router.ee8df66de9b5893216d4.jpg",
+    "index.html": "/index.html",
+    "main.1bfcdfea.css.map": "/static/css/main.1bfcdfea.css.map",
+    "main.72dfc886.js.map": "/static/js/main.72dfc886.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1bfcdfea.css",
+    "static/js/main.72dfc886.js"
+  ]
+}
