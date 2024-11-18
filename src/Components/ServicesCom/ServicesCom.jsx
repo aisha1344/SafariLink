@@ -1,25 +1,71 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ServicesCom = () => {
+const ServicesCom = ({ 
+  tagline = "SafariLink ISP",
+  title = "Cutting-edge",
+  highlightedText = "connectivity solutions",
+  description = "Empower your business with cutting-edge connectivity solutions from SafariLink ISP. Our innovative services are tailored to meet the unique needs of businesses and communities across East Africa.",
+  showDecorations = true,
+  className = ""
+}) => {
   return (
-    <section className='mt-32'>
+    <section className={`relative py-16 overflow-hidden ${className}`}>
+      {/* Background Decorations */}
+      {showDecorations && (
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        </div>
+      )}
+
       <motion.div 
-        className='container m-auto text-center'
+        className='container mx-auto px-4 md:px-16 relative'
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h3 className='text-[#969696] text-xl md:text-3xl mb-6'>
-          SafariLink ISP
-        </h3>
-        <h4 className='bg-gradient-to-r from-[#096976] to-[#3752a3fb] text-transparent bg-clip-text text-3xl md:text-6xl font-light mb-6'>
-          Cutting-edge <br /> connectivity solutions
-        </h4>
-        <p className='lg:w-[50%] lg:ml-[25%] text-[1.2rem] md:text-[1.3rem] text-gray-500 px-4 md:px-0 '>
-          Empower your business with cutting-edge connectivity solutions from SafariLink ISP. Our innovative services are tailored to meet the unique needs of businesses and communities across East Africa. Explore how we can elevate your connectivity experience.
-        </p>
+        {/* Section Header */}
+        <div className="text-center max-w-4xl mx-auto mb-8">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-primary text-xl font-medium uppercase tracking-wider"
+          >
+            {tagline}
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-semibold text-[#01241F] mt-4 mb-6"
+          >
+            {title} <br /> 
+            <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
+              {highlightedText}
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto"
+          >
+            {description}
+          </motion.p>
+        </div>
+
+        {/* Decorative Elements */}
+        {showDecorations && (
+          <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 w-24 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+        )}
       </motion.div>
     </section>
   );

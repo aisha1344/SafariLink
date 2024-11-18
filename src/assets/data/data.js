@@ -11,20 +11,27 @@ import { MdCarRepair, MdOutlinePrecisionManufacturing } from "react-icons/md";
 
 export const links = [
   {
-    title: "Home",
     link: "/",
+    title: "Home",
   },
   {
-    title: "About",
     link: "/about",
+    title: "About",
   },
   {
-    title: "Services",
     link: "/services",
+    title: "Services",
+    dropdown: true,
+    subLinks: [
+      { title: "Network Solutions", link: "/services#network" },
+      { title: "Cloud Services", link: "/services#cloud" },
+      { title: "Security Services", link: "/services#security" },
+      { title: "Managed Services", link: "/services#managed" },
+    ]
   },
   {
-    title: "Contact",
     link: "/contact",
+    title: "Contact",
   },
 ];
 

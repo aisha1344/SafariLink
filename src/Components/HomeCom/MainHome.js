@@ -2,21 +2,15 @@ import React from 'react';
 import WhoWeAre from './WhoWeAre'
 import WhatWeOffer from './WhatWeOffer'
 import Features from './Features'
-import Join from './Join'
-import Footer from './Footer'
-import HeroNav from './HeroNav'
-import Partnership from './Paterns';
+import Hero from './Hero';
 
 const MainHome = () => {
   return (
     <div className='overflow-hidden'>
-      <HeroNav/>
+      <Hero/>
       <WhoWeAre/>
       <WhatWeOffer/>
       <Features/>
-      <Join/>
-      <Partnership/>
-      <Footer/>
     </div>
   )
 }

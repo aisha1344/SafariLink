@@ -4,41 +4,103 @@ import { Link } from 'react-router-dom';
 
 const CardReferce = ({ title, discription, image, link }) => {
   return (
-    <section>
-      <div className="flex flex-col md:flex-row overflow-hidden md:gap-8">
-        <motion.img
-          className="w-[100%] h-[100%] md:w-[60rem] md:h-[35rem]"
-          src={image}
-          alt=""
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        />
-        <motion.div
-          className="py-8 md:w-[39%]  flex flex-col items-center w-[100%] px-4 sm:px-4"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h4 className="text-primary text-2xl mt-10 mb-4">SafariLink ISP</h4>
-          <h2 className="text-4xl font-light mb-4 md:w-[30rem] text-center">
-            {title}
-          </h2>
-          <p className="text-gray-700 text-[1rem] md:text-xl  text-center ">
-            {discription}
-          </p>
-          <Link to={link}>
-          <motion.button
-              className="bg-gradient-to-r from-[#3752a3] to-[#096976] py-3 px-16 rounded-lg mt-12 text-white w-full md:w-56"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+    <section className="py-16 overflow-hidden bg-gray-50">
+      <div className="container mx-auto px-4 md:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative order-2 lg:order-1"
+          >
+            {/* Background Decoration */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-secondary/5 to-primary/5 rounded-3xl transform -rotate-3"></div>
+            
+            {/* Image */}
+            <motion.div
+              className="relative rounded-2xl overflow-hidden shadow-lg"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
             >
-              Read More
-            </motion.button>
-          </Link>
-        </motion.div>
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </motion.div>
+          </motion.div>
+
+          {/* Content Section */}
+          <motion.div 
+            className="space-y-6 lg:pl-8 order-1 lg:order-2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-primary text-lg font-medium uppercase tracking-wider"
+            >
+              SafariLink ISP
+            </motion.span>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-[#01241F]"
+            >
+              {title}
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-gray-600 text-lg leading-relaxed"
+            >
+              {discription}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <Link to={link}>
+                <motion.button
+                  className="group relative inline-flex items-center justify-center px-8 py-3 
+                    bg-gradient-to-r from-secondary to-primary text-white rounded-lg 
+                    overflow-hidden transition-all duration-300 hover:shadow-lg"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="relative z-10 flex items-center text-lg font-medium">
+                    Read More
+                    <svg 
+                      className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </motion.button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

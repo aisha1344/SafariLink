@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Partnership = () => {
     const partners = [
@@ -17,11 +18,6 @@ const Partnership = () => {
             title: "IP Infusion",
             image: "https://espalobi.sirv.com/ip00-featured-ipi-logo.jpg"
         },
-        // {
-        //     id: 4,
-        //     title: "Ruckus",
-        //     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg58eH3r754v76ENudAWq0nR0l3DCOY4G9Cg&s"
-        // },
         {
             id: 5,
             title: "Palo Alto",
@@ -40,16 +36,31 @@ const Partnership = () => {
     ];
 
     return (
-        <section className="container mx-auto grid grid-cols-3 md:grid-cols-3 items-center lg:grid-cols-6 gap-8 py-10 px-8">
-            {partners.map(partner => (
-                <div key={partner.id} className="text-center max-w-[150px] ">
-                    <img 
-                        src={partner.image} 
-                        alt={partner.title} 
-                        className="w-full h-32 object-contain rounded-lg" 
-                    />
+        <section className="py-16 bg-white">
+            <div className="container mx-auto px-4 md:px-16">
+              
+
+                {/* Partners Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                    {partners.map((partner, index) => (
+                        <motion.div
+                            key={partner.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            whileHover={{ scale: 1.05 }}
+                            className="flex items-center justify-center h-24"
+                        >
+                            <img 
+                                src={partner.image} 
+                                alt={partner.title}
+                                className="max-h-full w-auto object-contain transition-transform duration-300" 
+                            />
+                        </motion.div>
+                    ))}
                 </div>
-            ))}
+            </div>
         </section>
     );
 }

@@ -1,12 +1,8 @@
 import React from 'react'
-import MainAbout from '../../Components/AboutCom/MainAbout'
+import AboutCom from '../../Components/AboutCom/AboutCom'
 
 const About = () => {
-  return (
-    <div>
-      <MainAbout/>
-    </div>
-  )
+  return <AboutCom />;
 }
 
 export default About

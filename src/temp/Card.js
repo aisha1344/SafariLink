@@ -4,53 +4,103 @@ import { Link } from "react-router-dom";
 
 const Card = ({ title, discription, image, link }) => {
   return (
-    <section className="mb-4 overflow-hidden">
+    <section className="py-16 overflow-hidden bg-white">
       <motion.div 
-        className="flex flex-col lg:flex-row lg:gap-8"
+        className="container mx-auto px-4 md:px-16"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="w-full sm:pt-16  px-2 sm:px-2 mb-14 md:px-16 flex flex-col  text-left md:text-left  lg:items-left">
-        <h4 className="text-primary text-2xl mt-10 mb-4 text-center md:text-left">SafariLink ISP</h4>
-          <motion.h2
-            className="text-4xl font-light text-center  md:text-left mb-4"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            className="text-[#161616] text-[1rem] md:text-[1.3rem] px-2 md:px-0 text-center md:text-left "
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            {discription}
-          </motion.p>
-          <Link to={link}>
-            <motion.button
-              className="bg-gradient-to-r from-[#3752a3] to-[#096976] py-3 px-16 rounded-lg mt-12 text-white w-full md:w-56"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content Section */}
+          <div className="space-y-6 lg:pr-8">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-primary text-lg font-medium uppercase tracking-wider"
             >
-              Read More
-            </motion.button>
-          </Link>
+              SafariLink ISP
+            </motion.span>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-[#01241F]"
+            >
+              {title}
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-gray-600 text-lg leading-relaxed"
+            >
+              {discription}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <Link to={link}>
+                <motion.button
+                  className="group relative inline-flex items-center justify-center px-8 py-3 
+                    bg-gradient-to-r from-primary to-secondary text-white rounded-lg 
+                    overflow-hidden transition-all duration-300 hover:shadow-lg"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="relative z-10 flex items-center text-lg font-medium">
+                    Read More
+                    <svg 
+                      className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </motion.button>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Image Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            {/* Background Decoration */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl transform rotate-3"></div>
+            
+            {/* Image */}
+            <motion.div
+              className="relative rounded-2xl overflow-hidden shadow-lg"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </motion.div>
+          </motion.div>
         </div>
-        <motion.img
-          className="w-[100%] h-[100%] lg:w-[50rem] lg:h-[35rem]"
-          src={image}
-          alt=""
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        />
       </motion.div>
     </section>
   );

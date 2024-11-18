@@ -4,39 +4,77 @@ import { indusry } from '../../assets/data/data';
 
 const Industries = () => {
   return (
-    <section className='bg-gray-100 py-8 h-[100%]'>
-      <div className='p-4 text-center'>
-        <h3 className='bg-gradient-to-tl from-primary to-secondary text-transparent bg-clip-text mt-6 text-7xl mb-6 font-sans font-light'>
-          Industries we serve
-        </h3>
-        <p className='text-[1.1rem] text-[#797979] md:w-[50%] md:mx-auto'>
-          Take control of your devices from anywhere in the world with our intuitive platforms designed to streamline monitoring, troubleshooting, and updates.
-        </p>
-      </div>
-
-      <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left mt-10 px-6 md:px-0'>
-        {indusry.map(({ title, icons, discription }, index) => (
-          <motion.div
-            className='bg-white mt-6 flex justify-evenly items-center p-3 text-left md:p-5 rounded-md md:rounded-lg shadow-md'
-            key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.3 }}
-            whileHover={{ scale: 1.05}}
+    <section className='py-24 bg-white'>
+      <div className='container mx-auto px-4 md:px-16'>
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <motion.span 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-primary text-lg font-medium uppercase tracking-wider"
           >
-            <span className='text-5xl text-primary'>
-              {icons}
-            </span>
-            <div className='md:ml-1 ml-3'>
-              <h3 className='text-3xl md:text-3xl text-secondary mb-4'>
-                {title}
-              </h3>
-              <p className='text-[1.1rem] text-[#797979] line-clamp-3 sm:line-clamp-none w-56'>
-                {discription}
-              </p>
-            </div>
-          </motion.div>
-        ))}
+            Industries
+          </motion.span>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-[#01241F] mt-4 mb-6"
+          >
+            Industries We Serve
+          </motion.h2>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-gray-600 text-lg leading-relaxed"
+          >
+            Take control of your devices from anywhere in the world with our intuitive platforms designed to streamline monitoring, troubleshooting, and updates.
+          </motion.p>
+        </div>
+
+        {/* Industries Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          {indusry.map(({ title, icons, discription }, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group bg-white p-8 rounded-xl shadow-lg transition-all duration-300"
+            >
+              {/* Icon */}
+              <div className="mb-6">
+                <div className="relative w-16 h-16">
+                    <span className="text-4xl md:text-5xl text-primary transform transition-transform duration-300 group-hover:scale-110">
+                      {icons}
+                    </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#01241F] group-hover:text-primary transition-colors duration-300">
+                  {title}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed">
+                  {discription}
+                </p>
+
+                {/* Bottom Line */}
+                <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
